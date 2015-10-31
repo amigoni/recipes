@@ -13,6 +13,10 @@
 		A7D328321BE4DCA100E06D5D /* recipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7D328301BE4DCA100E06D5D /* recipes.xcdatamodeld */; };
 		A7D328341BE4DCA100E06D5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D328331BE4DCA100E06D5D /* Assets.xcassets */; };
 		A7D328371BE4DCA100E06D5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D328351BE4DCA100E06D5D /* LaunchScreen.storyboard */; };
+		A7D3284A1BE4E77D00E06D5D /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D328481BE4E77D00E06D5D /* Recipe+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		A7D3284B1BE4E77D00E06D5D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D328491BE4E77D00E06D5D /* Recipe.swift */; settings = {ASSET_TAGS = (); }; };
+		A7D3284D1BE4F40700E06D5D /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3284C1BE4F40700E06D5D /* RecipeCell.swift */; settings = {ASSET_TAGS = (); }; };
+		A7D3284F1BE502BE00E06D5D /* CreateRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3284E1BE502BE00E06D5D /* CreateRecipeVC.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		A7D328331BE4DCA100E06D5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7D328361BE4DCA100E06D5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7D328381BE4DCA100E06D5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7D328411BE4E75D00E06D5D /* recipes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "recipes-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7D328481BE4E77D00E06D5D /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A7D328491BE4E77D00E06D5D /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = ../Recipe.swift; sourceTree = "<group>"; };
+		A7D3284C1BE4F40700E06D5D /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		A7D3284E1BE502BE00E06D5D /* CreateRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRecipeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +51,7 @@
 			children = (
 				A7D328281BE4DCA100E06D5D /* recipes */,
 				A7D328271BE4DCA100E06D5D /* Products */,
+				A7D328411BE4E75D00E06D5D /* recipes-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +66,43 @@
 		A7D328281BE4DCA100E06D5D /* recipes */ = {
 			isa = PBXGroup;
 			children = (
+				A7D3283E1BE4E6DE00E06D5D /* Model */,
+				A7D3283F1BE4E6E300E06D5D /* View */,
+				A7D328401BE4E6E800E06D5D /* Controller */,
 				A7D328291BE4DCA100E06D5D /* AppDelegate.swift */,
-				A7D3282B1BE4DCA100E06D5D /* ViewController.swift */,
-				A7D3282D1BE4DCA100E06D5D /* Main.storyboard */,
 				A7D328331BE4DCA100E06D5D /* Assets.xcassets */,
 				A7D328351BE4DCA100E06D5D /* LaunchScreen.storyboard */,
 				A7D328381BE4DCA100E06D5D /* Info.plist */,
 				A7D328301BE4DCA100E06D5D /* recipes.xcdatamodeld */,
 			);
 			path = recipes;
+			sourceTree = "<group>";
+		};
+		A7D3283E1BE4E6DE00E06D5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A7D328481BE4E77D00E06D5D /* Recipe+CoreDataProperties.swift */,
+				A7D328491BE4E77D00E06D5D /* Recipe.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A7D3283F1BE4E6E300E06D5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A7D3282D1BE4DCA100E06D5D /* Main.storyboard */,
+				A7D3284C1BE4F40700E06D5D /* RecipeCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A7D328401BE4E6E800E06D5D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A7D3282B1BE4DCA100E06D5D /* ViewController.swift */,
+				A7D3284E1BE502BE00E06D5D /* CreateRecipeVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +131,7 @@
 		A7D3281E1BE4DCA100E06D5D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Mozzarello;
 				TargetAttributes = {
@@ -138,8 +177,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7D3282C1BE4DCA100E06D5D /* ViewController.swift in Sources */,
+				A7D3284A1BE4E77D00E06D5D /* Recipe+CoreDataProperties.swift in Sources */,
 				A7D328321BE4DCA100E06D5D /* recipes.xcdatamodeld in Sources */,
+				A7D3284D1BE4F40700E06D5D /* RecipeCell.swift in Sources */,
+				A7D3284F1BE502BE00E06D5D /* CreateRecipeVC.swift in Sources */,
 				A7D3282A1BE4DCA100E06D5D /* AppDelegate.swift in Sources */,
+				A7D3284B1BE4E77D00E06D5D /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,10 +295,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = recipes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mozzarello.recipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "recipes-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -263,10 +309,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = recipes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mozzarello.recipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "recipes-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -289,6 +337,7 @@
 				A7D3283D1BE4DCA100E06D5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
